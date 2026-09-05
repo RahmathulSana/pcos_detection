@@ -31,7 +31,7 @@ Model Comparison
    ↓
 Grad-CAM Explainability
    ↓
-Prediction GUI
+Prediction GUI ```
 
 
 ## Dataset Preparation
@@ -60,6 +60,6 @@ The dataset was carefully audited before model training.
 Rahmathul Sana C P
 Simna Muhammed E C
 
-Guide: Prof. Gopika Gopan
+*Guide*: Prof. Gopika Gopan
 TKM College of Engineering
 
