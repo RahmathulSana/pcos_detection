@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Trained model files
+*.pt
+*.pth
+*.ckpt
+
+# Dataset files
+*.zip
+*.csv
+*.jpg
+*.jpeg
+*.png
+
+# Local data/output
+data/
+CLEAN_DATASET/
+SPLIT_DATASET/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
