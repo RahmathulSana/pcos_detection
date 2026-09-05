@@ -31,7 +31,8 @@ Model Comparison
    ↓
 Grad-CAM Explainability
    ↓
-Prediction GUI ```
+Prediction GUI 
+```
 
 
 ## Dataset Preparation
