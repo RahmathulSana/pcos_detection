@@ -33,7 +33,8 @@ Grad-CAM Explainability
    ↓
 Prediction GUI
 
-##Dataset Preparation
+
+## Dataset Preparation
 
 The dataset was carefully audited before model training.
 
@@ -43,7 +44,7 @@ The dataset was carefully audited before model training.
 - Final cleaned dataset: 3,928 images.
 - The dataset was divided into approximately 80% training and 20% testing data.
 
-##Technologies
+## Technologies
 - Python
 - PyTorch
 - torchvision
@@ -55,7 +56,7 @@ The dataset was carefully audited before model training.
 - Google Colab
 - Git & GitHub
 
-##Team
+## Team
 Rahmathul Sana C P
 Simna Muhammed E C
 
