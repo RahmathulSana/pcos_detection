@@ -73,9 +73,9 @@ The dataset was carefully audited before model training.
 
 ## Team
 
-Rahmathul Sana
+Rahmathul Sana C P 
 
-C P Simna Muhammed E C
+Simna Muhammed E C
 
 *Guide:* Prof. Gopika Gopan
 
