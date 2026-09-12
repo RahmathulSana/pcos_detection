@@ -74,7 +74,9 @@ The dataset was carefully audited before model training.
 ## Team
 
 Rahmathul Sana
+
 C P Simna Muhammed E C
 
 *Guide:* Prof. Gopika Gopan
+
 TKM College of Engineering
