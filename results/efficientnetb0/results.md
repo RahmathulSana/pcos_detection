@@ -54,8 +54,9 @@ Misclassified: 10
 
 ## Interpretation
 
-EfficientNetB0 achieved 98.73% accuracy and a 99.42% ROC-AUC on the held-out test dataset. The model correctly classified 776 out of 786 test images.
+EfficientNetB0 achieved 98.73% accuracy and a 99.42% ROC-AUC on the held-out test dataset. 
+The model correctly classified 776 out of 786 test images.
 
 ## Saved Visualizations
-confusion_matrix.png — EfficientNetB0 confusion matrix
-roc_curve.png — EfficientNetB0 ROC curve
+-`confusion_matrix.png` — EfficientNetB0 confusion matrix
+-`roc_curve.png` — EfficientNetB0 ROC curve
