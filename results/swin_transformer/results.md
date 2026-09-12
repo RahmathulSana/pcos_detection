@@ -47,27 +47,20 @@
 ```text
 [[627, 3],
  [6, 150]]
-
 Total test samples: 786
-
 Correctly classified: 777
-
 Misclassified: 9
+```
 
 ## Interpretation
 
 Swin Transformer achieved 98.85% accuracy and a 99.74% ROC-AUC on the held-out test dataset.
-
 The model correctly classified 777 out of 786 test images and misclassified 9 images.
 
 ## Saved Visualizations
 
 swin_confusion_matrix.png — Swin Transformer confusion matrix
-
 swin_roc_curve.png — Swin Transformer ROC curve
-
 swin_training_loss.png — Swin Transformer training loss
-
 swin_training_accuracy.png — Swin Transformer training accuracy
-
 swin_transformer_results.csv — Swin Transformer performance metrics
