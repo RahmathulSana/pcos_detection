@@ -2,7 +2,7 @@
 
 ## Model Configuration
 
-| Parameter | Value |
+| **Parameter** | **Value** |
 |---|---|
 | Architecture | ResNet50 |
 | Pretrained Weights | ImageNet |
@@ -18,56 +18,59 @@
 
 ## Baseline Results
 
-| Metric | Result |
+| **Metric** | **Result** |
 |---|---:|
-| Accuracy | 98.85% |
-| Precision | 96.82% |
-| Recall | 97.44% |
-| F1-score | 97.12% |
-| ROC-AUC | 99.67% |
+| Test Accuracy | 98.73% |
+| Macro Precision | 98.00% |
+| Macro Recall | 98.00% |
+| Macro F1-score | 98.00% |
+| ROC-AUC* | 99.84% |
 
-## Confusion Matrix
+### Confusion Matrix
 
 ```text
 [[625, 5],
- [4, 152]]
-True Positives (infected): 625
-False Negatives (infected): 5
-False Positives (noninfected): 4
-True Negatives (noninfected): 152
-
-Total test samples: 786
-Total misclassified samples: 9
+ [5, 151]]
 ```
+
+- True positives (PCOS-positive): 625
+- False negatives (PCOS-positive): 5
+- False positives (PCOS-negative): 5
+- True negatives (PCOS-negative): 151
+- Total test samples: 786
+- Total misclassified samples: 10
+
 ## Class-Weighted Experiment
 
-Class weights:
+Class weights calculated from the training dataset:
 
-| Class | Weight |
+| **Class** | **Weight** |
 |---|---:|
-| Infected | 0.6234 |
-| Noninfected | 2.5257 |
+| Infected (PCOS-positive) | 0.6234 |
+| Noninfected (PCOS-negative) | 2.5257 |
 
-| Metric | Baseline | Class-Weighted |
+| **Metric** | **Baseline** | **Class-Weighted** |
 |---|---:|---:|
-| Accuracy | 98.85% | 98.85% |
-| Precision | 96.82% | 96.82% |
-| Recall | 97.44% | 97.44% |
-| F1-score | 97.12% | 97.12% |
-| ROC-AUC | 99.67% | 99.72% |
+| Test Accuracy | 98.73% | 98.73% |
+| Macro Precision | 98.00% | 98.00% |
+| Macro Recall | 98.00% | 98.00% |
+| Macro F1-score | 98.00% | 98.00% |
+| ROC-AUC* | 99.84% | 99.88% |
 
-The class-weighted experiment produced the same accuracy, precision, recall, F1-score, and confusion matrix as the baseline model. A small improvement in ROC-AUC was observed.
+The class-weighted experiment was performed by continuing fine-tuning from the saved baseline checkpoint using a weighted cross-entropy loss. Both models produced the same hard predictions and confusion matrix. The class-weighted model showed a small increase in ROC-AUC, from 99.84% to 99.88%, but no improvement in accuracy or macro F1-score.
 
 ## Interpretation
 
-The ResNet50 model achieved strong performance on the held-out test set, with an accuracy of 98.85% and ROC-AUC of 99.67%.
+The ResNet50 baseline achieved 98.73% accuracy on the held-out test set, correctly classifying 776 of 786 images. The confusion matrix shows five false negatives and five false positives.
 
-The confusion matrix shows that 777 out of 786 test images were correctly classified, while 9 images were misclassified.
-
-The class-weighted experiment did not produce a meaningful improvement in classification metrics compared with the baseline.
+The class-weighted experiment retained the same classification performance while producing a small increase in ROC-AUC. Therefore, class weighting did not provide a meaningful improvement in the model's overall classification metrics in this experiment.
 
 ## Saved Results
 
-- `confusion_matrix.png` — Confusion matrix visualization
-- `roc_curve.png` — ROC curve visualization
-- `results.md` — Experiment results and configuration
+- `confusion_matrix.png` — Baseline confusion matrix
+- `ROC.png` — Baseline ROC curve
+- `confusion_matrix_weighted.png` — Class-weighted confusion matrix
+- `ROC_weighted.png` — Class-weighted ROC curve
+- `results.md` — Experiment configuration, metrics, and interpretation
+
+\* ROC-AUC treats the noninfected (PCOS-negative) class as the positive class for score calculation, consistent with the evaluation code. Results reflect classification on this dataset's held-out test split and do not establish clinical diagnostic performance.
