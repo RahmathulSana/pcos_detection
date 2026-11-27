@@ -12,45 +12,39 @@ The Vision Transformer was trained for 5 epochs using the PCOS image dataset.
 
 | Epoch | Training Loss |
 |---|---:|
-| 1 | 0.1722 |
-| 2 | 0.0647 |
-| 3 | 0.0416 |
-| 4 | 0.0329 |
-| 5 | 0.0438 |
+| 1 | 0.2098 |
+| 2 | 0.0841 |
+| 3 | 0.0875 |
+| 4 | 0.0395 |
+| 5 | 0.0243 |
 
 ### Training Accuracy
 
 | Epoch | Training Accuracy |
 |---|---:|
-| 1 | 93.16% |
-| 2 | 97.99% |
-| 3 | 98.95% |
-| 4 | 99.11% |
-| 5 | 98.66% |
+| 1 | 92.04% |
+| 2 | 97.55% |
+| 3 | 96.75% |
+| 4 | 96.75% |
+| 5 | 98.92% |
 
 ## Evaluation Results
 
 | Metric | Score |
 |---|---:|
-| Accuracy | 98.60% |
-| Precision | 96.18% |
-| Recall | 96.79% |
-| F1-Score | 96.49% |
-| ROC-AUC | 99.72% |
+| Accuracy | 96.69% |
+| Precision | 96.46% |
+| Recall | 99.52% |
+| F1-Score | 97.97% |
+| ROC-AUC | 99.48% |
 
 ## Confusion Matrix
 
 The confusion matrix contains:
 
-- True Positives: 624
-- False Positives: 6
-- False Negatives: 5
-- True Negatives: 151
+- True Positives: 627
+- False Positives: 3
+- False Negatives: 23
+- True Negatives: 133
 
-## Result Files
 
-- `vit_results.csv` — Evaluation metrics
-- `vit_training_loss.png` — Training loss curve
-- `vit_training_accuracy.png` — Training accuracy curve
-- `vit_roc_curve.png` — ROC curve
-- `vit_confusion_matrix.png` — Confusion matrix
